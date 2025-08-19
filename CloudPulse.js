@@ -136,7 +136,7 @@ function updateWeather(weather,description,cityname,cloudcover,visibility,icon) 
         cityfield.innerHTML = cityname;
         cloudfield.innerHTML = cloudcover
         visiblityfeild.innerHTML = `${visibility} Km`
-    weathericonfeild.src = `./Assets./weathericons/${icon}.svg`
+        weathericonfeild.src = `./Assets/weathericons/${icon}.svg`
 }
 
 function updatehumidity(humidity) {
