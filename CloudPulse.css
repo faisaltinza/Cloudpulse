@@ -326,6 +326,9 @@ p{
     white-space: nowrap;
 
 }
+.mainimg{
+    width: 80px;
+}
 /*media query for diffrant size of screen*/
 /*for tablet*/
 @media (min-width: 601px) and (max-width: 1170px) {
@@ -366,6 +369,9 @@ p{
         min-height: calc(100vh - 55.6px);
         position: relative;
         height: 100%;
+    }
+    .mainimg{
+        width: 75px;
     }
 }
 /*for mobile*/
