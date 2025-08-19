@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.modelbox{
+    height: 52px;
+}
+body{
+    min-height: 100vh;
+    /*overflow: hidden;*/
+    overflow-x: hidden;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    width: 168px;
+    flex-shrink: 0;
+}
+#navbar{
+    background-color: #F4FAFF;
+    padding: 8px 65px;
+    display: flex;
+    width: 100%;
+    min-height: 52px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.searchwrap{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+}
+.inputfeild{
+    display: flex;
+    padding: 8px 16px;
+    gap: 8px;
+    border-radius: 30px;
+    background-color: #FAFAFA;
+    border: 1px solid #0E72D7;
+    max-width: 500px;
+}
+#inputcity{
+    width: 100%;
+    background: none;
+    border: none;
+    font-family:font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    outline: none;
+    color: #333333;
+}
+#inputcity::placeholder{
+    color: #969696;
+    font-size: 16px;
+}
+.content{
+    display: flex;
+    gap: 16px;
+
+}
+#searchBtn{
+    background-color: #0E72D7;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #F4FAFF;
+}
+#main{
+    width: 100%;
+    height: calc(100vh - 50.6px);
+    position: relative;
+
+
+}
+#bgimage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+}
+.container{
+
+    position: relative;
+    width: calc(100% - 130px);
+    top: 0px;
+
+    height:calc(90% - 56px);
+    margin: 0px 65px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    }
+.card{
+    position: relative;
+    background-color: rgba(112, 112, 112, 0.1);
+    backdrop-filter: blur(17.5px);
+    box-shadow: 1px 4px 2.5px 0 rgba(0, 0, 0, 0.20);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 10%);
+    padding: 1px;
+    box-sizing: border-box;
+    border-radius: inherit;
+
+    -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+#card-5{
+    grid-row: 1/3;
+    grid-column: 3/5;
+}
+.iconEl{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+}
+.iconEl span{
+    display: flex;
+    align-items: center;
+    min-width: 123px;
+}
+.iconEl span img{
+    width: 50px;
+}
+#temp{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 52px;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFFFFF;
+}
+p{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-style: normal;
+}
+.items span{
+    display: flex;
+}
+.info{
+    display: flex;
+    gap: 4px;
+    white-space: nowrap;
+    align-items: center;
+    flex-shrink: 0;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.icon{
+    width: 22px;
+}
+.celcius{
+    width: 20px;
+}
+#weather{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFFFFF;
+}
+#humidity{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 38px;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFFFFF;
+}
+#windspeed{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 38px;
+    font-weight: normal;
+    font-style: normal;
+    color: #FFFFFF;
+}
+#humidbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: start;
+}
+#windbox{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: start;
+}
+#windicon{
+    position: relative;
+}
+#windarrow{
+    position: absolute;
+    left: 35px;
+    bottom: 25px;
+    transform: rotate(90deg);
+
+}
+#sunvisual{
+    height: 100%;
+    width: 100%;
+    /*background: #0074d9;*/
+    position: relative;
+    overflow: hidden;
+    min-width: 470px;
+    min-height: 250px;
+
+.boxinside{
+    width: 95%;
+    max-width: 490px;
+    /*background: #ff6c39;*/
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%) translateX(-50%);
+    left: 50%;
+
+}
+
+}
+
+#orbit{
+    width: 100%;
+    height: 100%;
+}
+.sundiv{
+    width: 95%;
+    max-width: 490px;
+    height: 20px;
+    /*background: #ff00d2;*/
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateY(50%) translateX(-50%) rotate(145deg);
+}
+.sunimg{
+    position: absolute;
+    left: -26px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#suninfo{
+    width: 100%;
+    height: 100%;
+    /*background: #8200d9;*/
+    padding: 20px;
+}
+.contline{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 490px;
+    width: 100%;
+}
+.timedatecont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#suninfo{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: start;
+    align-items: center;
+
+}
+#time{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 52px;
+    font-weight: normal;
+    font-style: normal;
+    white-space: nowrap;
+}
+#date{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    white-space: nowrap;
+
+}
+/*media query for diffrant size of screen*/
+/*for tablet*/
+@media (min-width: 601px) and (max-width: 1170px) {
+    .celciusicon{
+        width: 47px;
+    }
+    .celcius{
+        width: 18px;
+    }
+    #navbar{
+        padding: 0 30px;
+    }
+    #sunvisual{
+        min-width: 0;
+    }
+    .container{
+
+        position: relative;
+        width: calc(100% - 60px);
+        top: 0px;
+
+        min-height:calc(90% - 56px);
+        margin: 0px 30px;
+        padding-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr ;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    #card-5{
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+    #main{
+        width: 100%;
+        min-height: calc(100vh - 55.6px);
+        position: relative;
+        height: 100%;
+    }
+}
+/*for mobile*/
+@media (max-width: 600px){
+    .celciusicon{
+        width: 30px;
+    }
+    .celcius{
+        width: 14px;
+    }
+    #navbar{
+        padding: 0 16px;
+    }
+    #sunvisual{
+        min-width: 0;
+    }
+    .container{
+
+        position: relative;
+        width: calc(100% - 32px);
+        top: 0px;
+
+        min-height:calc(90% - 56px);
+        margin: 0px 16px;
+        padding-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 2fr ;
+        row-gap: 12px;
+        column-gap: 12px;
+    }
+    #card-5{
+        grid-row: 3/4;
+        grid-column: 1/3;
+    }
+    #main{
+        width: 100%;
+        min-height: calc(100vh - 55.6px);
+        position: relative;
+        height: 100%;
+    }
+    /*text properties*/
+    #temp{
+        font-size: 32px;
+    }
+    #humidity{
+        font-size: 32px;
+    }
+    #weather{
+        font-size: 16px;
+    }
+    #windspeed{
+        font-size: 32px;
+    }
+    .labelhumid{
+        font-size: 16px;
+    }
+    .lebelwindspd{
+        font-size: 16px;
+    }
+    p{
+        font-size: 13px;
+        white-space: wrap;
+    }
+    .icon{
+        width: 20px;
+    }
+    .info{
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        white-space: wrap;
+        align-items: center;
+        justify-content: start;
+    }
+    .card{
+        padding: 16px;
+    }
+    .mainimg{
+        width: 50px;
+    }
+    #windarrow{
+        width: 10px;
+        left: 20px;
+        bottom: 15px;
+    }
+    #time{
+        font-size: 32px;
+    }
+    #date{
+        font-size: 16px;
+    }
+}

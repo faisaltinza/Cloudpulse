@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cloud Pulse Weather</title>
+    <link rel="stylesheet" href="CloudPulse.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="CloudPulse.js"></script>
+</head>
+<body>
+<nav id="navbar" >
+    <img id="logo" src="./Assets/logo.svg" alt="" >
+    <div class="content">
+        <img src="./Assets/icon_menu.svg" alt="">
+    </div>
+</nav>
+
+<div class="modelbox">
+
+</div>
+
+<div id="main">
+    <div class="searchwrap">
+        <div class="inputfeild">
+            <img src="./Assets/icon_Search.svg" alt="">
+            <input id="inputcity" type="text" placeholder="Search your city here">
+
+        </div>
+        <button id="searchBtn">Submit</button>
+    </div>
+
+    <img id="bgimage" src="./Assets/pexels-hikaique-125510.jpg" alt="" >
+<!--    <video id="bgimage" src="https://videos.pexels.com/video-files/27604137/12183363_1440_2560_24fps.mp4" autoplay muted loop></video>-->
+    <div class="container">
+        <div id="card-1" class="card">
+            <div class="iconEl">
+                <img class="mainimg" id="tempIcon" src="./Assets/tempwarm.svg" alt="">
+                <div class="box" >
+                    <h2 id="temp">26</h2>
+                    <img class="celciusicon" src="./Assets/icon_celcius.svg" alt="" >
+                </div>
+            </div>
+            <div class="items">
+                <div class="info"><p>Actual Feel</p> <div class="box"><p id="feel">28</p><img class="celcius" src="./Assets/icon_celcius.svg" alt="" ></div>
+                </div>
+                <div class="info"><img class="icon" src="./Assets/icon_max.svg" alt=""><p>Max</p><div class="box"> <p id="tempMax">28</p><img class="celcius" src="./Assets/icon_celcius.svg" alt="" ></div>
+                </div>
+                <div class="info"><img class="icon" src="./Assets/icon_min.svg" alt=""><p>Min</p><div class="box"> <p id="tempMin">21</p><img class="celcius" src="./Assets/icon_celcius.svg" alt="" ></div>
+                </div>
+            </div>
+        </div>
+        <div id="card-2" class="card">
+
+            <div class="items">
+                <div class="iconEl">
+                    <img class="mainimg" id="weathericon" src="./Assets/temp_weather.svg" alt="">
+                    <div>
+                    <h2 id="weather">Thunderstorm</h2>
+                    </div>
+                </div>
+                <div class="info"><img class="icon" alt="" src="./Assets/icon_feather.svg"><p id="description">Broken Clouds</p></div>
+                <div class="info"><img class="icon" alt="" src="./Assets/icon_location.svg"><p id="location">Jaipur</p></div>
+                <div class="info"><img class="icon" src="./Assets/icon_cloudcover.svg" alt=""><p>Cloud Cover : </p> <div><p id="cloudcover">21%</p></div>
+                </div>
+                <div class="info"><img class="icon" src="./Assets/icon_visiblity.svg" alt="" ><p>Visibilty : </p> <div><p id="visiblity">10km</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="card-3" class="card">
+            <div class="iconEl">
+                <img class="mainimg" src="./Assets/icon_humidity.svg" alt="">
+                <div id="humidbox" >
+                    <h2 id="humidity">26%</h2>
+                    <p class="labelhumid">Humidity</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="info"><p>0–30% → Dry</p></div>
+                <div class="info"><p>31–60% → Comfortable</p></div>
+                <div class="info"><p>61–100% → Humid / Sticky</p></div>
+
+            </div>
+        </div>
+        <div id="card-4" class="card">
+            <div class="iconEl">
+                <div  id="windicon"><img class="mainimg" src="./Assets/icon_wind.svg" alt="">
+                    <img id="windarrow" src="./Assets/icon_windarrow.svg" alt="">
+                </div>
+                <div id="windbox" >
+                    <h2 id="windspeed">3.5/ms</h2>
+                    <p class="lebelwindspd">Windspeed</p>
+                </div>
+            </div>
+            <div class="items">
+                <div class="info"><img class="icon" src="./Assets/icon_direction.svg" alt=""><p>Direction : </p> <div><p id="winddirect">W(272°)</p></div>
+                </div>
+                <div class="info"><img class="icon" src="./Assets/icon_windfeels.svg" alt=""><p>Feels : </p> <div><p id="windfeels">Gentle Breeze</p></div>
+                </div>
+                <div class="info"><img class="icon" src="./Assets/icon_windspeed.svg" alt=""> <div class="box"><p id="windspeedkm">16</p><p>km/h</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="card-5" class="card">
+            <div id="sunvisual">
+                <div class="boxinside">
+                    <img id="orbit" src="./Assets/orbit.svg" alt="">
+                </div>
+                <div class="sundiv">
+                    <img class="sunimg" src="./Assets/sunorbit.svg" alt="">
+                </div>
+
+            </div>
+            <div id="suninfo">
+                <div class="contline">
+                    <div class="info"><img class="icon" src="./Assets/icon_sunrise.svg" alt="" ><p>Sunrise : </p> <div><p id="sunrisetime">06:15 AM</p> </div> </div>
+
+                    <div class="info"> <img class="icon" src="./Assets/icon_sunset.svg" alt=""><p>Sunset : </p> <div><p id="sunsettime">07:42 PM</p></div> </div>
+
+                </div>
+                <div class="timedatecont">
+                    <div class="timecont"><p id="time" >12:26 PM</p></div>
+                    <div class="datecont"><p id="date" >Friday 11-Aug-2025</p></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
